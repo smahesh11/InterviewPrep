@@ -15,9 +15,9 @@ namespace InterviewPrep.TreesAndGraphs
 
             int mid = (start+end)/2;
             BinaryTreNode root =  new BinaryTreNode(array[mid]);
-            root.left = CreateMinimalBST(array, start, mid-1);
+            root.GetLeft = CreateMinimalBST(array, start, mid-1);
             //Console.WriteLine(root.left.GetData);            
-            root.right = CreateMinimalBST(array, mid+1, end);
+            root.GetRight = CreateMinimalBST(array, mid+1, end);
             // Console.WriteLine(root.right.GetData);
 
             Console.WriteLine(root.GetData);

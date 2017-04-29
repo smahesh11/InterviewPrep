@@ -28,8 +28,8 @@ namespace InterviewPrep.TreesAndGraphs
 
                 foreach (BinaryTreNode p in parents)
                 {
-                    if (p.left != null) levelList.Add(p.left);
-                    if (p.right != null) levelList.Add(p.right);
+                    if (p.GetLeft != null) levelList.Add(p.GetLeft);
+                    if (p.GetRight != null) levelList.Add(p.GetRight);
                 }
                // level++;
                 // dict.Add(level, levelList);             

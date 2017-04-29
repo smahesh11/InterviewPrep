@@ -42,8 +42,8 @@ namespace InterviewPrep.TreesAndGraphs
     public class BinaryTreNode
     {
         int _data;
-        public BinaryTreNode left;
-        public BinaryTreNode right;
+        public BinaryTreNode _left;
+        public BinaryTreNode _right;
 
          public BinaryTreNode(int data)
         {
@@ -58,11 +58,11 @@ namespace InterviewPrep.TreesAndGraphs
                     return root;
 
 
-                if (GetParent(root.left, node) != null)
-                    return GetParent(root.left, node);
+                if (GetParent(root.GetLeft, node) != null)
+                    return GetParent(root.GetLeft, node);
 
-                else if (GetParent(root.right, node) != null)
-                    return GetParent(root.right, node);         
+                else if (GetParent(root.GetRight, node) != null)
+                    return GetParent(root.GetRight, node);         
             }
             return null;
         }
@@ -70,16 +70,19 @@ namespace InterviewPrep.TreesAndGraphs
         public int GetData
         {
             get { return _data; }
+            set { _data = value; }
         }
 
         public BinaryTreNode GetLeft
         {
-            get { return left; } 
+            get { return _left; }
+            set { _left = value; }
         }
 
         public BinaryTreNode GetRight
         {
-            get { return right; }
+            get { return _right; }
+            set { _right = value; }
         }
     }
 }

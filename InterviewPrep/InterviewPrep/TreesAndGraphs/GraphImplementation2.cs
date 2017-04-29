@@ -185,6 +185,7 @@ namespace InterviewPrep.TreesAndGraphs
     {
         GraphNode2<T> _start;
         GraphNode2<T> _end;
+        int _weight;
 
         public GraphNode2<T> GetStart
         {
@@ -198,7 +199,13 @@ namespace InterviewPrep.TreesAndGraphs
             set { _end = value; }
         }
 
+        public int GetWeight
+        {
+            get { return _weight; }
+            set { _weight = value; }
+        }
     }
+
     public class GraphNode2<T>
     {
         T _data;

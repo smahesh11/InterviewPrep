@@ -10,12 +10,12 @@ namespace InterviewPrep.TreesAndGraphs
     {
         public BinaryTreNode GetSuccessor(BinaryTreNode root, BinaryTreNode node)
         {
-            if (node.right != null)
+            if (node.GetRight != null)
             {
-                BinaryTreNode x = node.right;
+                BinaryTreNode x = node.GetRight;
 
                 while (x != null)
-                    x = x.left;
+                    x = x.GetLeft;
 
                 return x;
             }
@@ -41,7 +41,7 @@ namespace InterviewPrep.TreesAndGraphs
             else {
                 BinaryTreNode x = node;
                 BinaryTreNode p = x.GetParent(root, node);
-                while (p!= null && p.left!=x)
+                while (p!= null && p.GetLeft!=x)
                 {
                     x = p;
                     p = p.GetParent(root, x);

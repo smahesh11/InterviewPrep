@@ -13,11 +13,11 @@ namespace InterviewPrep.TreesAndGraphs
             if (root == null)
                 return -1;
            
-            int leftHeight = GetTreeHight(root.left);
+            int leftHeight = GetTreeHight(root.GetLeft);
             if (leftHeight == int.MinValue)
                 return int.MinValue;
                  
-            int rightHeight = GetTreeHight(root.right);
+            int rightHeight = GetTreeHight(root.GetRight);
             if (rightHeight == int.MinValue)
                 return int.MinValue;
             int diff = Math.Abs(leftHeight - rightHeight);

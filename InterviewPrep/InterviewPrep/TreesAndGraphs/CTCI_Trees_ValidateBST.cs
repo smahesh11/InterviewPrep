@@ -20,30 +20,81 @@ namespace InterviewPrep.TreesAndGraphs
             if ((min != null && root.GetData <= min.GetData) || (min != null && root.GetData > max.GetData))
                 return false;
 
-            if (IsBST(root.left, min, root) || !IsBST(root.GetRight, root, max))
+            if (IsBST(root.GetLeft, min, root) || !IsBST(root.GetRight, root, max))
                 return false;
 
             return true;
         }
 
         BinaryTreNode _last = null;
-        //public bool CheckIsBST(BinaryTreNode root)
-        //{
-        //    if (root == null)
-        //        return true;
 
-        //    if(!CheckIsBST(root.GetLeft))
-        //    return false;
 
-        //    if (_last != null && root.GetData <= _last.GetData)
-        //        return false;
+        public BinaryTreNode SeachInBST(BinaryTreNode root, int data)
+        {
+            if (root == null)
+                return null;
 
-        //    _last = root;
-           
-        //    if (!CheckIsBST(root.GetRight))
-        //        return false;
+            if (root.GetData == data)
+                return root;
 
-        //    return true;
-        //}
+            if (data < root.GetData)
+              return  SeachInBST(root.GetLeft, data);
+
+            else
+               return SeachInBST(root.GetRight, data);           
+        }
+
+        public BinaryTreNode InsertInBST(BinaryTreNode root, int data)
+        {
+            if (root == null)
+            {
+                root = new BinaryTreNode(data);
+                return root;
+            }      
+
+             if (data < root.GetData)
+              root.GetLeft=  InsertInBST(root.GetLeft, data);
+
+            else root.GetRight = InsertInBST(root.GetRight, data);
+
+            return root;
+        }
+
+        public BinaryTreNode DeleteFromBST(BinaryTreNode root, int data)
+        {
+            if (root == null)
+                return root;
+
+            if (data < root.GetData)
+                root.GetLeft = DeleteFromBST(root.GetLeft, data);
+            if (data > root.GetData)
+                root.GetRight = DeleteFromBST(root.GetRight, data);
+
+            else
+            {
+                if (root.GetLeft == null)
+                    return root.GetRight;
+
+                if (root.GetRight == null)
+                    return root.GetLeft;
+
+                 root.GetData =  InOrderSucc(root.GetRight);    
+                root.GetRight = DeleteFromBST(root.GetRight, root.GetData); 
+            }
+
+            return root;
+        }
+
+        public int InOrderSucc(BinaryTreNode root)
+        {
+            int min = root.GetData;
+            while (root.GetLeft != null)
+            {            
+                min = root.GetLeft.GetData;
+                root = root.GetLeft;
+            }
+            return min;
+        }
+        
     }
 }
