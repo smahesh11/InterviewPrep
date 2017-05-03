@@ -10,7 +10,6 @@ namespace InterviewPrep.TreesAndGraphs
     {
         List<GraphNode2<T>> _nodes = new List<GraphNode2<T>>();
         List<Edge<T>> _edges = new List<Edge<T>>();
-        bool _visited = false;
 
         // enum State {Visited, Unvisited}
 
