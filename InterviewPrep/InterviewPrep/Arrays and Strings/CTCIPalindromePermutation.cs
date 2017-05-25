@@ -8,14 +8,13 @@ namespace InterviewPrep.Arrays_and_Strings
 {
     public class CTCIPalindromePermutation
     {
-        public static bool isPalindromePermutation(string str)
+        public static bool IsPalindromePermutation(string str)
         {
-            //Time Complexity : O(n2)
+            //Time Complexity : O(n^2)
             //Space Complexity : O(n)
             if (string.IsNullOrEmpty(str))
                 return false;
-
-
+			
             Dictionary<char, int> freq = new Dictionary<char, int>();
 
            

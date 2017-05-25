@@ -29,9 +29,8 @@ namespace InterviewPrep.Linked_List
             if (node1 != node2)
                 return null;
 
-            int diff = Math.Abs(size1 - size2);
-          
-            Node longerHead = null;
+            int diff = Math.Abs(size1 - size2);          
+           
             if (size1 > size2)
                 head1= TrimLonger(head1, diff);
 

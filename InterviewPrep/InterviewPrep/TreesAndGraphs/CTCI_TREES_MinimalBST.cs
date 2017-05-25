@@ -20,7 +20,7 @@ namespace InterviewPrep.TreesAndGraphs
             root.GetRight = CreateMinimalBST(array, mid+1, end);
             // Console.WriteLine(root.right.GetData);
 
-            Console.WriteLine(root.GetData);
+            //Console.WriteLine(root.GetData);
             return root;
 
         }

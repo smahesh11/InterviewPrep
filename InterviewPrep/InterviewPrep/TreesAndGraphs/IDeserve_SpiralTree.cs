@@ -49,7 +49,7 @@ namespace InterviewPrep.TreesAndGraphs
 		}
 
 
-		public void Print(BinaryTreNode root, int currentLevel, int height, bool righttoLeft)
+		public void PrintSpiralNoStacks(BinaryTreNode root, int currentLevel, int height, bool righttoLeft)
 		{
 			if (root == null)
 				return;
@@ -61,14 +61,14 @@ namespace InterviewPrep.TreesAndGraphs
 
 			if (righttoLeft)
 			{
-				Print(root.GetRight, currentLevel + 1, height, righttoLeft);
-				Print(root.GetLeft, currentLevel + 1, height, righttoLeft);
+				PrintSpiralNoStacks(root.GetRight, currentLevel + 1, height, righttoLeft);
+				PrintSpiralNoStacks(root.GetLeft, currentLevel + 1, height, righttoLeft);
 			}
 
 			else
 			{
-				Print(root.GetLeft, currentLevel + 1, height, righttoLeft);
-				Print(root.GetRight, currentLevel + 1, height, righttoLeft);
+				PrintSpiralNoStacks(root.GetLeft, currentLevel + 1, height, righttoLeft);
+				PrintSpiralNoStacks(root.GetRight, currentLevel + 1, height, righttoLeft);
 			}
 		}
 		public void PrintSpiralTreeNoBuffer(BinaryTreNode root)
@@ -78,11 +78,11 @@ namespace InterviewPrep.TreesAndGraphs
 
 			bool rightToLeft = true;
 			BinaryTree bt = new BinaryTree();
-			int height = bt.GetDepth(root);
+			int height = bt.GetHeight(root);
 
 			for (int i = 0; i < height; i++)
 			{
-				Print(root, 0, i, rightToLeft);
+				PrintSpiralNoStacks(root, 0, i, rightToLeft);
 				rightToLeft = !rightToLeft;
 			}
 		}

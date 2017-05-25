@@ -10,7 +10,7 @@ namespace InterviewPrep.TreesAndGraphs
 	public class BinaryTree
 	{
 		public void InOrderTraversal(BinaryTreNode root)
-		{
+		{// Time Complexity : O(n)
 			if (root != null)
 			{
 				InOrderTraversal(root.GetLeft);
@@ -20,7 +20,7 @@ namespace InterviewPrep.TreesAndGraphs
 			Console.WriteLine();
 		}
 		public void PreOrderTraversal(BinaryTreNode root)
-		{
+		{// Time Complexity : O(n)
 			if (root != null)
 			{
 				Console.WriteLine(root.GetData);
@@ -30,7 +30,7 @@ namespace InterviewPrep.TreesAndGraphs
 			Console.WriteLine();
 		}
 		public void PostOrderTraversal(BinaryTreNode root)
-		{
+		{// Time Complexity : O(n)
 			if (root != null)
 			{
 				PostOrderTraversal(root.GetLeft);
@@ -41,7 +41,7 @@ namespace InterviewPrep.TreesAndGraphs
 		}
 
 		public void IterativePreOrderTraversal(BinaryTreNode root)
-		{
+		{// Time Complexity : O(n)
 			Stack<BinaryTreNode> s = new Stack<BinaryTreNode>();
 			if (root != null)
 				s.Push(root);
@@ -58,12 +58,12 @@ namespace InterviewPrep.TreesAndGraphs
 			}			
 		}
 
-		public int GetDepth(BinaryTreNode node)
-		{
+		public int GetHeight(BinaryTreNode node)
+		{// Time Complexity : O(n)
 			if (node == null)
 				return 0;
 			else
-				return (1 + Math.Max(GetDepth(node.GetLeft), GetDepth(node.GetRight)));
+				return (1 + Math.Max(GetHeight(node.GetLeft), GetHeight(node.GetRight)));
 		}
 
 	}
@@ -72,6 +72,7 @@ namespace InterviewPrep.TreesAndGraphs
         int _data;
          BinaryTreNode _left;
          BinaryTreNode _right;
+		int _rank;
 
 		public BinaryTreNode()
 		{ }
@@ -82,19 +83,25 @@ namespace InterviewPrep.TreesAndGraphs
         }
 
         public BinaryTreNode GetParent(BinaryTreNode root,BinaryTreNode node)
-        {            
-            while (root != null)
-            {
-                if ((root.GetLeft != null && root.GetLeft == node || root.GetRight != null && root.GetRight == node))
-                    return root;
+        {
+			if (root == null)
+				return null;
 
+			else if (root.GetData == node.GetData)
+				return null;
 
-                if (GetParent(root.GetLeft, node) != null)
-                    return GetParent(root.GetLeft, node);
+			else if (root.GetLeft != null && root.GetLeft.GetData == node.GetData)
+					return root;
 
-                else if (GetParent(root.GetRight, node) != null)
-                    return GetParent(root.GetRight, node);         
-            }
+				else if (root.GetRight!=null && root.GetRight.GetData == node.GetData)
+					return root;
+
+				else if (node.GetData < root.GetData )
+					return GetParent(root.GetLeft, node);
+
+				else if (node.GetData > root.GetData )
+					return GetParent(root.GetRight, node);			
+		           
             return null;
         }
 
@@ -115,5 +122,11 @@ namespace InterviewPrep.TreesAndGraphs
             get { return _right; }
             set { _right = value; }
         }
-    }
+
+		public int GetRank
+		{
+			get { return _rank; }
+			set { _rank = value; }
+		}
+	}
 }

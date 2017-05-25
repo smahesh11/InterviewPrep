@@ -8,46 +8,44 @@ namespace InterviewPrep.TreesAndGraphs
 {
     class InOrderSuccessor
     {
-        public BinaryTreNode GetSuccessor(BinaryTreNode root, BinaryTreNode node)
-        {
-            if (node.GetRight != null)
-            {
-                BinaryTreNode x = node.GetRight;
+		public BinaryTreNode GetSuccessor(BinaryTreNode root, BinaryTreNode node)
+		{
+			BinaryTreNode x = new BinaryTreNode();
+			x = node;
 
-                while (x != null)
-                    x = x.GetLeft;
+			if (x.GetRight == null)
+				return x.GetParent(root,x);
 
-                return x;
-            }
+			if (x.GetRight != null  && x==x.GetParent(root,x).GetLeft)
+				return GetLeftMostChild(x.GetRight);
 
-            //BinaryTreNode succ = null;
-            //while (root != null)
-            //{
-            //    if (node.GetData < root.GetData)
-            //    {
-            //        succ = root;
-            //        if (root.GetLeft != null)
-            //            root = root.GetLeft;
-            //    }
+			BinaryTreNode p = new BinaryTreNode();
 
-            //    if (node.GetData > root.GetData)
-            //    {
-            //        if (root.GetRight != null)
-            //            root = root.GetRight;
-            //    }
-            //}
+			while (p != null && p.GetLeft != x)
+			{
+				x = p;
+				p = x.GetParent(root,x);				
+			}
 
-            //return succ;              
-            else {
-                BinaryTreNode x = node;
-                BinaryTreNode p = x.GetParent(root, node);
-                while (p!= null && p.GetLeft!=x)
-                {
-                    x = p;
-                    p = p.GetParent(root, x);
-                }
-                return x;
-            }
-        }
+			if (p != null)
+				return p;
+
+			return null;
+
+		}
+
+		BinaryTreNode GetLeftMostChild(BinaryTreNode node)
+		{
+			BinaryTreNode x = new BinaryTreNode();
+
+			while (x.GetLeft != null)
+			{
+				x = x.GetLeft;
+			}
+
+			return x;
+		}
+        
+        
     }
 }

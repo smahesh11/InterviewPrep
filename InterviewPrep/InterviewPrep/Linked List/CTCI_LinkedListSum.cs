@@ -77,9 +77,4 @@ namespace InterviewPrep.Linked_List
             this.data = data;
         }
     }
-
-    public partial class LinkedList1
-    {
-        private Node1 _head;   
-    }
-}
+   }

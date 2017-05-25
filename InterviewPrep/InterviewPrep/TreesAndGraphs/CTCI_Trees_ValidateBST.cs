@@ -20,16 +20,14 @@ namespace InterviewPrep.TreesAndGraphs
             if ((min != null && root.GetData <= min.GetData) || (min != null && root.GetData > max.GetData))
                 return false;
 
-            if (IsBST(root.GetLeft, min, root) || !IsBST(root.GetRight, root, max))
+            if (IsBST(root.GetLeft, min, root) || IsBST(root.GetRight, root, max))
                 return false;
 
             return true;
-        }
-
-        BinaryTreNode _last = null;
+        }      
 
 
-        public BinaryTreNode SeachInBST(BinaryTreNode root, int data)
+        public BinaryTreNode SearchInBST(BinaryTreNode root, int data)
         {
             if (root == null)
                 return null;
@@ -38,10 +36,10 @@ namespace InterviewPrep.TreesAndGraphs
                 return root;
 
             if (data < root.GetData)
-              return  SeachInBST(root.GetLeft, data);
+              return  SearchInBST(root.GetLeft, data);
 
             else
-               return SeachInBST(root.GetRight, data);           
+               return SearchInBST(root.GetRight, data);           
         }
 
         public BinaryTreNode InsertInBST(BinaryTreNode root, int data)
@@ -53,9 +51,12 @@ namespace InterviewPrep.TreesAndGraphs
             }      
 
              if (data < root.GetData)
-              root.GetLeft=  InsertInBST(root.GetLeft, data);
+             // root.GetLeft= 
+					InsertInBST(root.GetLeft, data);
 
-            else root.GetRight = InsertInBST(root.GetRight, data);
+            else
+				//root.GetRight = 
+					InsertInBST(root.GetRight, data);
 
             return root;
         }

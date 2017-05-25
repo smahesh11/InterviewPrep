@@ -127,14 +127,14 @@ namespace InterviewPrep.Arrays_and_Strings
 
             #region IsPalindromePermutation
 
-            Console.WriteLine(CTCIPalindromePermutation.isPalindromePermutation("tact coa"));// Fail
-            Console.WriteLine(CTCIPalindromePermutation.isPalindromePermutation("abcbac"));// Pass
-            Console.WriteLine(CTCIPalindromePermutation.isPalindromePermutation("bgf gkl flbk"));// Pass
-            Console.WriteLine(CTCIPalindromePermutation.isPalindromePermutation("bgf shjsg"));// Fail
-            Console.WriteLine(CTCIPalindromePermutation.isPalindromePermutation("tact cota"));// Fail
-            Console.WriteLine(CTCIPalindromePermutation.isPalindromePermutation("saddas assddasa"));// Fail
-            Console.WriteLine(CTCIPalindromePermutation.isPalindromePermutation(""));// Hack
-            Console.WriteLine(CTCIPalindromePermutation.isPalindromePermutation(null));// Hack
+            Console.WriteLine(CTCIPalindromePermutation.IsPalindromePermutation("tact coa"));// Fail
+            Console.WriteLine(CTCIPalindromePermutation.IsPalindromePermutation("abcbac"));// Pass
+            Console.WriteLine(CTCIPalindromePermutation.IsPalindromePermutation("bgf gkl flbk"));// Pass
+            Console.WriteLine(CTCIPalindromePermutation.IsPalindromePermutation("bgf shjsg"));// Fail
+            Console.WriteLine(CTCIPalindromePermutation.IsPalindromePermutation("tact cota"));// Fail
+            Console.WriteLine(CTCIPalindromePermutation.IsPalindromePermutation("saddas assddasa"));// Fail
+            Console.WriteLine(CTCIPalindromePermutation.IsPalindromePermutation(""));// Hack
+            Console.WriteLine(CTCIPalindromePermutation.IsPalindromePermutation(null));// Hack
 
 
             //Pass case : {"abcd", "abcd"}, { "shweta", "shwet"}, {"helo", "hello"}, {"hale", "pale"}

@@ -10,7 +10,7 @@ namespace InterviewPrep.TreesAndGraphs
     {
         public BinaryTreNode LeastCommonAncestor(BinaryTreNode root, BinaryTreNode p, BinaryTreNode q)
         {
-            int diff = height(root, p) - height(root, q);
+            int diff = Height(root, p) - Height(root, q);
             BinaryTreNode big = diff >= 0 ? p : q;
             BinaryTreNode small = diff < 0 ? p : q;
 
@@ -31,7 +31,7 @@ namespace InterviewPrep.TreesAndGraphs
             return null;
         }
 
-        public int height(BinaryTreNode root, BinaryTreNode n)
+        public int Height(BinaryTreNode root, BinaryTreNode n)
         {
             int i = 0;
             BinaryTreNode node = n;
