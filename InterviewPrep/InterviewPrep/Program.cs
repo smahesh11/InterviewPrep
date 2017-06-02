@@ -804,22 +804,22 @@ namespace InterviewPrep
 
 			RankTree rank = new RankTree();
 			int[] arr = new int[] { 5,1,4,4,5,9,7,13,3 };
-			//Console.WriteLine(rank.Rank(arr, 4));
-			//Console.WriteLine(rank.Rank(arr, 9));
-			//Console.WriteLine(rank.Rank(arr, 7));
-			//Console.WriteLine(rank.Rank(arr, 13));
+            //Console.WriteLine(rank.Rank(arr, 4));
+            //Console.WriteLine(rank.Rank(arr, 9));
+            //Console.WriteLine(rank.Rank(arr, 7));
+            //Console.WriteLine(rank.Rank(arr, 13));
 
-			#region Search In Rotated Array
-			/*
+            #region Search In Rotated Array
+            /*
 			SearchInRoatetdArray search = new SearchInRoatetdArray();
 			Console.WriteLine(search.Search((new int[] { 5, 6, 7, 1, 2, 3, 4 }), 3, 0, 6 ));
 			*/
-			#endregion
-			#endregion
+            #endregion
+            #endregion
 
 
-			#region LPS
-			/*
+            #region LPS
+            /*
 			LongestPalindromicSubstring lps = new LongestPalindromicSubstring();
 			Console.WriteLine(lps.Result(""));
 			Console.WriteLine(lps.Result(null));
@@ -832,10 +832,10 @@ namespace InterviewPrep
 			Console.WriteLine(lps.Result("apple"));
 			Console.WriteLine(lps.Result("abcde"));
 			*/
-			#endregion
+            #endregion
 
-			#region LCS
-			/*
+            #region LCS
+            /*
 			LongestCommonSubstring lcs = new LongestCommonSubstring();
 			List<string> res = new List<string>();
 
@@ -849,18 +849,18 @@ namespace InterviewPrep
 				Console.WriteLine(str);
 			}
 			*/
-			#endregion
+            #endregion
 
-			#region LongestPalindromic Subsequence
-			/*
+            #region LongestPalindromic Subsequence
+            /*
 			//TestCase: alapasl-> 5, lmaonkl-> 3 , abcgdfba-> 5, abdjkbla-> 5  
 			//PassCase: "" ->"", 0-> "", fhdkfjhkdh->5
 			LongestPalindrominSubsequence lps2 = new LongestPalindrominSubsequence();
 			Console.WriteLine(lps2.Result(null));
 			*/
-			#endregion
-			#region LongestCommonSubsequence
-			/*
+            #endregion
+            #region LongestCommonSubsequence
+            /*
 			//PassCase: { hello, helylpo}->5, { ok, okj}->2,{ por, snore}->2
 			// FailCase: { "", fabcf}--> "", { jkdhjkdf, ""}-> ""
 			LongestCommonSubsequence lcs2 = new LongestCommonSubsequence();
@@ -871,10 +871,10 @@ namespace InterviewPrep
 			Console.WriteLine(lcs2.Result("por", null));
 			Console.WriteLine(lcs2.Result("", null));
 			*/
-			#endregion
+            #endregion
 
-			#region HashMap Implementation
-			/*
+            #region HashMap Implementation
+            /*
 			HashMap hashmap = new HashMap();
 			hashmap.Put(1, 2);
 			hashmap.Put(9, 9);
@@ -890,25 +890,50 @@ namespace InterviewPrep
 			Console.WriteLine(hashmap.Get(33));
 			Console.WriteLine(hashmap.Get(18));
 			*/
-			#endregion
+            #endregion
 
-			#region LengthOfLongestSubstring with no repeats
-			//Pass case: "abcabcbb"->3
-			/*
+            #region LengthOfLongestSubstring with no repeats
+            //Pass case: "abcabcbb"->3
+            /*
 			LengthOfLongestSubstring res = new LengthOfLongestSubstring();
 			Console.WriteLine(res.Result("dskjgjhabcdefghijklfhddf kjgfd"));
 			*/
-			#endregion
+            #endregion
 
-			#region ReverseString 2
+            #region ReverseString 2
+            /*
 			ReverseString2 str = new ReverseString2();
 			Console.WriteLine(str.ReverseWords("a b c"));
 			Console.WriteLine(str.ReverseWords("a b"));
 			Console.WriteLine(str.ReverseWords("a"));
 			Console.WriteLine(str.ReverseWords("Hello World"));
-			#endregion
-			
-			Console.ReadLine();
+            */
+            #endregion
+
+            #region Trie Implementation
+            /*
+                List<string> list = new List<string>();
+                list.Add("car");
+                list.Add("carrom");
+                list.Add("roll");
+                Trie trie = new Trie(list);
+                Console.Write(trie.IsContains("abs"));
+            */
+            #endregion
+
+            #region LRU Implementation
+            /*
+            LRU lru = new LRU(3);
+            lru.PutItem(0, 10);
+            lru.PutItem(2, 40);
+            lru.PutItem(4, 40);
+            lru.PutItem(6, 60);
+
+            Console.WriteLine(lru.GetItem(6));
+            */
+            #endregion
+
+            Console.ReadLine();
 
 
 		}

@@ -61,7 +61,13 @@
     <Compile Include="Dynamic Programming\LongestPalindromicSubstring.cs" />
     <Compile Include="Dynamic Programming\LongestPalindrominSubsequence.cs" />
     <Compile Include="Dynamic Programming\LongestSubstrNoRepeats.cs" />
+    <Compile Include="Implementations\DoublyLisnkedList_Implementation.cs" />
+    <Compile Include="Implementations\GraphImplementation2.cs" />
     <Compile Include="Implementations\HashMap Implementation.cs" />
+    <Compile Include="Implementations\LRU_Implementation.cs" />
+    <Compile Include="Implementations\Queue_Implementation.cs" />
+    <Compile Include="Implementations\Stack_Implementation.cs" />
+    <Compile Include="Implementations\Tree_Implementation2.cs" />
     <Compile Include="Linked List\CTCI_Linkedlist_DeleteMiddleElement.cs" />
     <Compile Include="Linked List\CTCI_LinkedList_Palindrome.cs" />
     <Compile Include="Linked List\CTCI_LinkedList_Partition.cs" />
@@ -71,8 +77,7 @@
     <Compile Include="Linked List\CTCI_LinkedList_LoopDetection.cs" />
     <Compile Include="Linked List\Linkedlist1.cs" />
     <Compile Include="Linked List\CTCI_LinkedListSum.cs" />
-    <Compile Include="LinkedListMainClass.cs" />
-    <Compile Include="Linked List\LinkedList_Implementation.cs" />
+    <Compile Include="Implementations\LinkedList_Implementation.cs" />
     <Compile Include="Misc\ReverseString2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -89,8 +94,6 @@
     <Compile Include="Stacks and Queues\CTCI_StacksMin.cs" />
     <Compile Include="Stacks and Queues\CTCI_QueueUsingTwoStacks.cs" />
     <Compile Include="Stacks and Queues\CTCI_StackSort.cs" />
-    <Compile Include="Stacks and Queues\Queue_Implementation.cs" />
-    <Compile Include="Stacks and Queues\Stack_Implementation.cs" />
     <Compile Include="TreesAndGraphs\CTCI_TreeCheckIsTreeBalanced.cs" />
     <Compile Include="TreesAndGraphs\CTCI_Trees_ListOfNodesAtEachLevel.cs" />
     <Compile Include="TreesAndGraphs\CTCI_Tree_IsSubtree.cs" />
@@ -102,7 +105,6 @@
     <Compile Include="TreesAndGraphs\CTCI_Trees_ValidateBST.cs" />
     <Compile Include="TreesAndGraphs\IDeserve_DeepestOddLevelLeafHeight.cs" />
     <Compile Include="TreesAndGraphs\GraphImplementation.cs" />
-    <Compile Include="TreesAndGraphs\GraphImplementation2.cs" />
     <Compile Include="TreesAndGraphs\CTCI_TopologicalSort.cs" />
     <Compile Include="TreesAndGraphs\Ideserve_BTtoBST_SameStructure.cs" />
     <Compile Include="TreesAndGraphs\IDeserve_IfTwotreesAreIdentical.cs" />
@@ -112,7 +114,7 @@
     <Compile Include="TreesAndGraphs\IDeserve_MaxElementEachSubarray.cs" />
     <Compile Include="TreesAndGraphs\IDeserve_SpiralTree.cs" />
     <Compile Include="TreesAndGraphs\Tree_Implementation.cs" />
-    <Compile Include="TreesAndGraphs\Tree_Implementation2.cs" />
+    <Compile Include="Implementations\Trie_Implementation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
