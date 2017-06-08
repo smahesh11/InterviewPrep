@@ -801,14 +801,14 @@ namespace InterviewPrep
 			// */
 			#endregion
 
-
+            /*
 			RankTree rank = new RankTree();
 			int[] arr = new int[] { 5,1,4,4,5,9,7,13,3 };
             //Console.WriteLine(rank.Rank(arr, 4));
             //Console.WriteLine(rank.Rank(arr, 9));
             //Console.WriteLine(rank.Rank(arr, 7));
             //Console.WriteLine(rank.Rank(arr, 13));
-
+            */
             #region Search In Rotated Array
             /*
 			SearchInRoatetdArray search = new SearchInRoatetdArray();
@@ -933,9 +933,56 @@ namespace InterviewPrep
             */
             #endregion
 
+            #region AllSubsets
+            /*
+            AllSubsets all = new AllSubsets();
+           List<List<int>> res= all.GetAllSubsets(new List<int> { 1,2,3,4,5}, 0);
+           
+            foreach(var l1 in res)
+            {
+                Console.WriteLine();
+                foreach (var l2 in l1)
+                {
+                    Console.Write(l2.ToString() + ",");
+                }
+            }
+            */
+            #endregion
+
+            #region Magic Index
+            MagicIndex magic = new MagicIndex();
+            int[] arr = new int[] { -10, -5, 2, 2, 2 ,3 ,4, 7, 9, 12, 13};
+            Console.WriteLine(magic.GetMagicIndex(arr, 0 , arr.Length-1));
+
+            #endregion
+
+            #region RobotGrid
+            RobotInGrid robo = new RobotInGrid();
+            #endregion
+
+            #region String Permutation No dups
+            /*
+            PermutationNoDups per = new PermutationNoDups();
+
+            foreach (string str in per.FindPermutations("shia"))
+            {
+                Console.WriteLine(str);
+            }
+            */
+            #endregion
+
+            #region String Permutation with dups
+            
+            PermutationWithDups per = new PermutationWithDups();
+
+            foreach (string str in per.GetPermutations("sharath"))
+            {
+                Console.WriteLine(str);
+            }
+            
+            #endregion
+
             Console.ReadLine();
-
-
 		}
 	}
 

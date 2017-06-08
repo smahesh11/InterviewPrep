@@ -35,7 +35,6 @@ namespace InterviewPrep.Dynamic_Programming
             }
 
             return allsubsets;
-
         }
     }
 }

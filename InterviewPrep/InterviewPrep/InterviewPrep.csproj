@@ -56,6 +56,18 @@
     <Compile Include="Arrays and Strings\CTCIPalindromePermutation.cs" />
     <Compile Include="Arrays and Strings\CTCIURLify.cs" />
     <Compile Include="Arrays and Strings\IDeserve_PrintMatrixDiagonally.cs" />
+    <Compile Include="Dynamic Programming\BooleanEvaluation.cs" />
+    <Compile Include="Dynamic Programming\CTCI_AllSubsetsOfAGivenSet.cs" />
+    <Compile Include="Dynamic Programming\CTCI_CoinSum.cs" />
+    <Compile Include="Dynamic Programming\CTCI_EightQueens.cs" />
+    <Compile Include="Dynamic Programming\CTCI_MagicIndex.cs" />
+    <Compile Include="Dynamic Programming\CTCI_MultiplyTwoNumbers.cs" />
+    <Compile Include="Dynamic Programming\CTCI_NumberOfHops.cs" />
+    <Compile Include="Dynamic Programming\CTCI_PaintFill.cs" />
+    <Compile Include="Dynamic Programming\CTCI_PermutationNoDups.cs" />
+    <Compile Include="Dynamic Programming\CTCI_PermutationWithDups.cs" />
+    <Compile Include="Dynamic Programming\CTCI_RobotMatrix.cs" />
+    <Compile Include="Dynamic Programming\CTCI_TowerOfHanoi.cs" />
     <Compile Include="Dynamic Programming\LongestCommonSubsequence.cs" />
     <Compile Include="Dynamic Programming\LongestCommonSubstring.cs" />
     <Compile Include="Dynamic Programming\LongestPalindromicSubstring.cs" />
@@ -75,7 +87,6 @@
     <Compile Include="Linked List\CTCI_LinkedList_KthElementFromTheLast.cs" />
     <Compile Include="Linked List\CTCI_LinkedList_Intersection.cs" />
     <Compile Include="Linked List\CTCI_LinkedList_LoopDetection.cs" />
-    <Compile Include="Linked List\Linkedlist1.cs" />
     <Compile Include="Linked List\CTCI_LinkedListSum.cs" />
     <Compile Include="Implementations\LinkedList_Implementation.cs" />
     <Compile Include="Misc\ReverseString2.cs" />
@@ -88,7 +99,7 @@
     <Compile Include="Sorting and Searching\CTCI_SortedMerge.cs" />
     <Compile Include="Sorting and Searching\CTCI_SortedSearch_NoSize.cs" />
     <Compile Include="Sorting and Searching\CTCI_SparceSearch.cs" />
-    <Compile Include="Sorting and Searching\SortedMtarixSearch.cs" />
+    <Compile Include="Sorting and Searching\CTCI_SortedMtarixSearch.cs" />
     <Compile Include="Stacks and Queues\AnimalShelter.cs" />
     <Compile Include="Stacks and Queues\CTCI_OneArrayThreeStacks.cs" />
     <Compile Include="Stacks and Queues\CTCI_StacksMin.cs" />
